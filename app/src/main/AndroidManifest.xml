@@ -11,18 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UTSMOBILE">
-        <activity android:name=".UpdateActivity"></activity>
-        <activity android:name=".DetailActivity" />
-        <activity android:name=".CreateBarangActivity" />
-        <activity android:name=".BarangActivity" />
-        <activity android:name=".DashboardActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".KelolaActivity" />
+        <activity android:name=".UpdateActivity" />
+        <activity android:name=".DetailActivity" />
+        <activity android:name=".CreateBarangActivity" />
+        <activity android:name=".BarangActivity" />
+        <activity android:name=".DashboardActivity" />
+        <activity android:name=".LoginActivity"></activity>
         <activity android:name=".MainActivity" />
     </application>
 

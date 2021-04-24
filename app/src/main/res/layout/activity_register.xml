@@ -4,22 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    tools:context=".CreateBarangActivity">
+    tools:context=".RegisterActivity">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Input New Barang"
+            android:text="Reqister"
             android:textStyle="bold"
             android:textSize="30sp"
             android:layout_marginBottom="5dp"/>
-
         <ProgressBar
             android:visibility="invisible"
             android:layout_width="wrap_content"
@@ -44,7 +41,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Location"
+            android:hint="Email"
             app:errorEnabled="true"
             app:boxStrokeColor="@color/teal_200"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -52,13 +49,13 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etLocation" />
+                android:id="@+id/etEmail" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Description"
+            android:hint="Password"
             app:errorEnabled="true"
             app:boxStrokeColor="@color/teal_200"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
@@ -66,7 +63,23 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/etDescription" />
+                android:inputType="textPassword"
+                android:id="@+id/etPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confrim Password"
+            app:errorEnabled="true"
+            app:boxStrokeColor="@color/teal_200"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/etConfrim" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,6 +90,4 @@
             android:padding="10dp"
             android:text="Save" />
     </LinearLayout>
-
-
 </LinearLayout>

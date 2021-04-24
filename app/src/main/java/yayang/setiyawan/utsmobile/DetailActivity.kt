@@ -40,9 +40,9 @@ class DetailActivity : AppCompatActivity(),BarangActivityContract.ViewDelete {
     }
     private fun User(){
         val user = getUser()
-        val nama = findViewById<TextView>(R.id.namabarang)
+        val nama = findViewById<TextView>(R.id.name)
         val lokasi = findViewById<TextView>(R.id.location)
-        val keterangan = findViewById<TextView>(R.id.deskripsi)
+        val keterangan = findViewById<TextView>(R.id.description)
 
         user?.let {
             nama.text = it.name
@@ -66,7 +66,7 @@ class DetailActivity : AppCompatActivity(),BarangActivityContract.ViewDelete {
                 .setTitleText("Data di dihapus")
                 .show()
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, KelolaActivity::class.java))
             finish()
         }, 1000)
     }

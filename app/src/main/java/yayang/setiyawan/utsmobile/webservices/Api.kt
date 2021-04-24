@@ -67,6 +67,13 @@ fun get(@Header("x-access-token")token: String): Call<WrappedListResponse<Barang
             @Path("id") id: Int,
             @Header("x-access-token") token : String
     ) : Call<WrappedResponse<Barang>>
+    @POST("api/register")
+    fun register(
+        @Field("name") name: String? = null,
+        @Field("email") email: String?= null,
+        @Field("password") password: String?= null,
+        @Field("conf_password ") conf_password: String? = null
+    ):Call<WrappedResponse<User>>
 }
 data class WrappedResponse<T>(
     @SerializedName("message") var message: String?,

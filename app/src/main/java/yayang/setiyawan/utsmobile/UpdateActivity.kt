@@ -46,7 +46,7 @@ class UpdateActivity : AppCompatActivity(), BarangActivityContract.ViewEdit {
             .setTitleText("Data di ubah")
             .show()
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, KelolaActivity::class.java))
             finish()
         },1000)
     }

@@ -32,14 +32,13 @@ class LoginActivity : AppCompatActivity(),LoginActivityContract.View {
             }
         }
     }
-
     override fun toast(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
     override fun success(token: String, user_id: String) {
         Utils.setToken(this,token,user_id)
-        startActivity(Intent(this,BarangActivity::class.java))
+        startActivity(Intent(this,DashboardActivity::class.java))
             .also {
                 finish()
             }
@@ -51,7 +50,7 @@ class LoginActivity : AppCompatActivity(),LoginActivityContract.View {
 
     override fun isError(err: String?) {
         inId.error=err
-    }
+    }   
 
     override fun passwordError(err: String?) {
         inPass.error=err
@@ -64,7 +63,7 @@ class LoginActivity : AppCompatActivity(),LoginActivityContract.View {
     private fun isLoggedIn(){
         val token = Utils.getToken(this)
         if (token != null){
-            startActivity(Intent(this,MainActivity::class.java)).also { finish() }
+            startActivity(Intent(this,DashboardActivity::class.java)).also { finish() }
         }
     }
 }

@@ -5,7 +5,7 @@ import android.content.Context.MODE_PRIVATE
 
 class Utils {
     companion object{
-        var API_ENDPOINT = "https://5affc16373bd.ngrok.io/"
+        var API_ENDPOINT = "https://rest-mobile.herokuapp.com/"
 
         fun getToken(context: Context) : String? {
             val token = context.getSharedPreferences("USER", MODE_PRIVATE)

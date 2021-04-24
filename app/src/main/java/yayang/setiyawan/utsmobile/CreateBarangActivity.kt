@@ -39,7 +39,7 @@ class CreateBarangActivity : AppCompatActivity(),BarangActivityContract.ViewCrea
             .setTitleText("Data Di Tambahkan")
             .show()
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, KelolaActivity::class.java))
             finish()
         },1000)
     }
